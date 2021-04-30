@@ -78,6 +78,9 @@ function App() {
         <h2>Projects</h2>
         <div className="portfolio">
           <span>FEATURED PROJECTS</span>
+          <div className='featured-projects'>
+            
+          </div>
         </div>
       </ProjectsStyled>
     </div>
