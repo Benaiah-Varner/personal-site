@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+
+:root {
+  --color-black: black;
+  --header-font-size: 7rem;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  font-family: 'Abel', sans-serif;
+  box-sizing: border-box;
+  background: #fcfcfc;
+}
+
+.burger {
+  background: white;
+  cursor: pointer;
+  position: fixed;
+  border-radius: 50%;
+  box-shadow: 0px 1px 15px 1px #595959;
+  height: 7rem;
+  width: 7rem;
+  right: 10rem;
+  top: 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.burger-bar {
+  cursor: pointer;
+  border: 1.5px solid black; 
+  background: black;
+  width: 4rem;
+  margin: 5px 1px;
+}
+
+section {
+  margin: 0 10%;
+}
+
+.about-images__img:hover {
+  outline: 2px solid black;
+  z-index: 2;
+  transform: scale(1.18);
+  box-shadow: 2px 10px 12px -5px #333;
+}
+.about-images:hover .about-images__img:not(:hover){
+  transform: scale(.93);  
+}
