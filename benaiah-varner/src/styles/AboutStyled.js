@@ -7,84 +7,85 @@ export const AboutStyled = styled.section`
     text-align: center;
     font-size: var(--header-font-size);
   }
-
   .about-text {
-    span {
-      color: darkgrey;
-      font-weight: 600;
-      font-size: 1.75rem;
+    .background {
+      box-shadow: 1px 2px 9px 0px #d6d6d6;
+      border-radius: 3px;
+      border: 1px solid #c9f7b0;
+      background-color: #c9f7b0;
+      width: 40%;
       position: relative;
-
-      &:before {
-        margin: 0 1rem;
-        content: '';
-        position: absolute;
-        height: 5px;
-        border-top: 1px solid darkgrey;
-        top: 50%;
-        max-width: 300px;
-      }
-
-      &:before {
-        left: 100%;
-        width: 40rem;
+      height: auto;
+      p {
+        margin: 10rem 3rem 3rem 3rem;
+        padding-top: 20%;
+        padding: 3%;
+        font-size: 2rem;
+        line-height: 3rem;
       }
     }
+    .technical-skills {
+      border-radius: 3px;
+      margin-top: 2%;
+      width: 50%;
+      position: relative;
+      background-color: rgba(195, 244, 239, 0.55);
+      box-shadow: 1px 2px 9px 0px #d6d6d6;
+    }
+    span {
+      position: absolute;
+      top: 2rem;
+      left: -2rem;
+      border-radius: 4px;
+      box-shadow: 1px 8px 10px -3px grey;
+      opacity: 0.8;
+      background: white;
+      color: black;
+      font-weight: 600;
+      padding: 2% 5%;
+      font-size: 1.75rem;
+    }
     ul {
-      margin: 2rem 0;
+      padding: 20% 5% 5% 5%;
       list-style: none;
       list-style-position: inside;
-      width: 40%;
+      width: 100%;
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-between;
+      justify-content: space-around;
       li {
         margin: 10% 0;
         font-size: 2rem;
-        &:before {
-          content: '>';
-          padding-right: 1rem;
-          font-size: 1.5rem;
-        }
       }
-    }
-    p {
-      margin: 2rem 0;
-      padding: 1rem 0;
-      font-size: 2rem;
-      max-width: 50%;
-      line-height: 3rem;
-      width: 50%;
     }
   }
   .row {
     display: flex;
-    justify-content: space-between;
   }
 
   .about-images {
     width: 50%;
     position: relative;
     z-index: 1;
-
+    margin-right: 5%;
     &__img {
       border-radius: 3px;
-      outline-offset: 1.5rem;
       right: 0;
       position: absolute;
-      height: 30rem;
+      height: 32rem;
       box-shadow: 1px 8px 10px -3px #333;
       transition: all 0.2s;
       &--1 {
-        right: 28rem;
-        top: 18rem;
+        right: 27rem;
+        top: 24.5rem;
       }
       &--2 {
-        top: 2rem;
-        right: 12rem;
+        top: 8rem;
+        right: 8rem;
       }
       &--3 {
-        top: 22rem;
+        right: -5rem;
+        top: 30rem;
       }
     }
   }

@@ -1,13 +1,14 @@
 import styled from 'styled-components';
 
 export const HeaderStyled = styled.div`
-  height: 95vh;
+  height: 100vh;
   position: relative;
+  z-index: 2;
   animation: fade-in 1.5s;
   .header {
     text-align: left;
     position: absolute;
-    top: 15%;
+    top: 18%;
     left: 13%;
     h1,
     h2 {
