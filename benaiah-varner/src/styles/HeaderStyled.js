@@ -1,13 +1,14 @@
 import styled from 'styled-components';
 
 export const HeaderStyled = styled.div`
-  height: 95vh;
+  height: 100vh;
   position: relative;
+  z-index: 2;
   animation: fade-in 1.5s;
   .header {
     text-align: left;
     position: absolute;
-    top: 15%;
+    top: 18%;
     left: 13%;
     h1,
     h2 {
@@ -22,17 +23,19 @@ export const HeaderStyled = styled.div`
   .get-in-touch {
     border: 2px solid black;
     background: white;
-    margin: 9rem 0; 
+    margin: 9rem 0;
     padding: 1.2rem 1.4rem;
     font-size: 1.8rem;
     cursor: pointer;
-    transition: all .4s;
+    transition: all 0.4s;
   }
   .get-in-touch:hover {
     background: var(--color-black);
-    color: white;
-    transform: translateY(-.9rem);
+    transform: translateY(-0.9rem);
     box-shadow: 1px 8px 10px -3px #333;
+    a {
+      color: white;
+    }
   }
 
   @keyframes fade-in {
@@ -40,7 +43,7 @@ export const HeaderStyled = styled.div`
       opacity: 0;
       transform: translateY(5rem);
     }
-  
+
     100% {
       opacity: 1;
       transform: translateY(0);
