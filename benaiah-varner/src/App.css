@@ -32,6 +32,9 @@ a {
 .icon {
   cursor: pointer;
 }
+.icon:hover {
+  color: lightblue;
+}
 .header-container {
   position: absolute;
   width: 100%;

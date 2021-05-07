@@ -34,6 +34,16 @@ export const ProjectsStyled = styled.section`
         .github {
           margin-right: 2rem;
         }
+        .featured-icons {
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-start;
+        }
+        a {
+          margin-right: 6%;
+          display: flex;
+          flex-direction: column;
+        }
         * {
           margin: 0.9rem 0;
         }
@@ -56,7 +66,7 @@ export const ProjectsStyled = styled.section`
         }
         p {
           font-size: 1.6rem;
-          padding: 2rem;
+          padding: 4rem 2rem;
           line-height: 2.8rem;
         }
         .list-icons {
@@ -86,6 +96,16 @@ export const ProjectsStyled = styled.section`
           }
         }
         .description {
+          .featured-icons {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+          }
+          a {
+            margin-left: 6%;
+            display: flex;
+            flex-direction: column;
+          }
           * {
             margin: 0.9rem 0;
           }
@@ -118,7 +138,6 @@ export const ProjectsStyled = styled.section`
           }
           ul {
             padding: 1rem 0;
-
             list-style: none;
             display: flex;
             width: 100%;
@@ -151,10 +170,10 @@ export const OtherProjectStyled = styled.section`
       background-color: white;
       width: 25%;
       height: 40rem;
-      box-shadow: -10px 15px 30px rgba(0,0,0,0.2);
+      box-shadow: -10px 15px 30px rgba(0, 0, 0, 0.2);
       border-radius: 3px;
       h3 {
-        margin: 3rem 0;
+        margin: 3rem 0 1rem 0;
         text-align: center;
         font-size: 2.5rem;
       }
@@ -162,12 +181,18 @@ export const OtherProjectStyled = styled.section`
         font-size: 1.6rem;
         padding: 2.5rem;
         line-height: 2.8rem;
-        text-align: center;
+        height: 60%;
       }
       .icon-box {
+        display: flex;
+        justify-content: space-evenly;
         text-align: center;
         .github {
-          margin-right: 3rem;
+        }
+        a {
+          text-align: center;
+          display: flex;
+          flex-direction: column;
         }
       }
     }

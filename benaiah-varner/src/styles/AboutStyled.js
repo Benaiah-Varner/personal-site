@@ -13,11 +13,11 @@ export const AboutStyled = styled.section`
       border-radius: 3px;
       border: 1px solid #c9f7b0;
       background-color: #c9f7b0;
-      width: 40%;
+      width: 50%;
       position: relative;
       height: auto;
       p {
-        margin: 10rem 3rem 3rem 3rem;
+        margin: 8rem 3rem 3rem 3rem;
         padding-top: 20%;
         padding: 3%;
         font-size: 2rem;
@@ -46,7 +46,7 @@ export const AboutStyled = styled.section`
       font-size: 1.75rem;
     }
     ul {
-      padding: 20% 5% 5% 5%;
+      padding: 18% 5% 5% 5%;
       list-style: none;
       list-style-position: inside;
       width: 100%;
@@ -54,7 +54,7 @@ export const AboutStyled = styled.section`
       flex-wrap: wrap;
       justify-content: space-around;
       li {
-        margin: 10% 0;
+        margin: .9rem;
         font-size: 2rem;
       }
     }
@@ -62,22 +62,22 @@ export const AboutStyled = styled.section`
   .row {
     display: flex;
   }
-
   .about-images {
     width: 50%;
     position: relative;
+    height: 50%;
     z-index: 1;
     margin-right: 5%;
     &__img {
       border-radius: 3px;
       right: 0;
       position: absolute;
-      height: 32rem;
+      height: 33rem;
       box-shadow: 1px 8px 10px -3px #333;
       transition: all 0.2s;
       &--1 {
-        right: 27rem;
-        top: 24.5rem;
+        right: 23rem;
+        top: 29rem;
       }
       &--2 {
         top: 8rem;
@@ -85,7 +85,7 @@ export const AboutStyled = styled.section`
       }
       &--3 {
         right: -5rem;
-        top: 30rem;
+        top: 26rem;
       }
     }
   }

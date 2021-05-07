@@ -14,6 +14,7 @@ export const FooterStyled = styled.div`
         margin-bottom: 11.5vh;
         font-size: 4rem;
         .footer-icon {
+            cursor: pointer;
             margin: 0 2rem;
         }
     }

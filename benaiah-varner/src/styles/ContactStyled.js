@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const ContactStyled = styled.section`
   height: auto;
   margin-bottom: 25vh;
+  margin-top: 15vh;
   h2 {
     text-align: center;
     margin-bottom: 8rem;
@@ -41,7 +42,11 @@ export const ContactStyled = styled.section`
       height: 100%;
       display: flex;
       flex-direction: column;
-
+        .success-message {
+            font-size: 2.2rem;
+            padding-bottom: 4%;
+            text-align: center;
+        }
       .contact-info {
         display: flex;
         justify-content: space-evenly;
@@ -62,6 +67,9 @@ export const ContactStyled = styled.section`
             border-bottom: 2px solid black;
             &[placeholder] {
               font-size: 2rem;
+            }
+            &:focus {
+              outline: none;
             }
           }
         }
@@ -84,6 +92,10 @@ export const ContactStyled = styled.section`
           border-bottom: 2px solid black;
           &[placeholder] {
             font-size: 2rem;
+            font-family: 'Montserrat', sans-serif;
+          }
+          &:focus {
+            outline: none;
           }
         }
       }
