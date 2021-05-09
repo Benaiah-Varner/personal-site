@@ -40,7 +40,7 @@ export const AboutStyled = styled.section`
       box-shadow: 1px 8px 10px -3px grey;
       opacity: 0.8;
       background: white;
-      color: black;
+      color: #333;
       font-weight: 600;
       padding: 2% 5%;
       font-size: 1.75rem;
@@ -54,7 +54,7 @@ export const AboutStyled = styled.section`
       flex-wrap: wrap;
       justify-content: space-around;
       li {
-        margin: .9rem;
+        margin: 0.9rem;
         font-size: 2rem;
       }
     }
@@ -86,6 +86,83 @@ export const AboutStyled = styled.section`
       &--3 {
         right: -5rem;
         top: 26rem;
+      }
+    }
+  }
+  @media (max-width: 1200px) {
+    h2 {
+      margin-top: 10rem;
+    }
+    .about-images {
+      &__img {
+        height: 27rem;
+        &--1 {
+          right: 100%;
+          top: 32rem;
+        }
+        &--2 {
+          top: 11rem;
+          right: 45%;
+        }
+        &--3 {
+          right: -30%;
+          top: 29rem;
+        }
+      }
+    }
+  }
+  @media (max-width: 900px) {
+    .row {
+      height: auto;
+      flex-direction: column;
+    }
+    .about-text {
+      .background {
+        width: 95%;
+        p {
+          margin: 6rem 3rem 3rem 3rem;
+        }
+      }
+      .technical-skills {
+        width: 95%;
+      }
+      ul {
+      padding: 9% 5% 5% 5%;
+    }
+  }
+  .about-images {
+      &__img {
+        height: 25rem;
+        &--1 {
+          right: 35%;
+          top: 8rem;
+        }
+        &--2 {
+          top: 5rem;
+          right: -27%;
+        }
+        &--3 {
+          right: -90%;
+          top: 8rem;
+        }
+      }
+    }
+  }
+  @media(max-width: 700px) {
+    height: 73rem;
+    .about-images {
+      height: 1rem;
+      &__img {
+   display: none;
+      }
+    }
+  }
+  @media (max-width: 500px) {
+    .about-text {
+      .technical-skills {
+        ul {
+          padding: 17% 5% 5% 5%;
+        }
       }
     }
   }

@@ -21,7 +21,6 @@ export const NavStyled = styled.div`
       font-weight: 800;
       a {
         text-decoration: none;
-        color: black;
       }
     }
   }
@@ -37,7 +36,7 @@ export const NavStyled = styled.div`
       justify-content: flex-end;
       width: 50%;
     }
-    li {
+    li:not(.res-li) {
       position: relative;
       font-weight: 700;
       margin-left: 20%;
@@ -46,7 +45,6 @@ export const NavStyled = styled.div`
       transition: all 0.2s ease-in-out;
       a {
         text-decoration: none;
-        color: black;
       }
       &:before {
         position: absolute;
@@ -66,15 +64,36 @@ export const NavStyled = styled.div`
       }
     }
     .resume {
+      border-radius: 3px;
       border: 2px solid black;
       transition: all 0.4s;
+      font-weight: 700;
+      margin-left: 20%;
+      font-size: 1.8rem;
+      padding: 2% 4%;
+      transition: all 0.2s ease-in-out;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       &:hover {
         cursor: pointer;
         background: var(--color-black);
         transform: translateY(-0.2rem);
-        a {
-          color: white;
-        }
+        color: white;
+      }
+    }
+  }
+  @media (max-width: 500px) {
+    .nav {
+      justify-content: space-around;
+      .logo {
+        padding-left: 0;
+        font-size: 3rem;
+      }
+    }
+    .links {
+      li {
+        font-size: 1.5rem;
       }
     }
   }

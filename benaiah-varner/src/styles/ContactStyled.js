@@ -3,50 +3,39 @@ import styled from 'styled-components';
 export const ContactStyled = styled.section`
   height: auto;
   margin-bottom: 25vh;
-  margin-top: 15vh;
+  margin-top: 8vh;
   h2 {
     text-align: center;
     margin-bottom: 8rem;
     font-size: var(--header-font-size);
   }
+  .get-in-touch {
+    margin: 5rem auto;
+    width: 43%;
+  }
   .form-container {
-    border-radius: 5px;
+    border-radius: 3px;
     box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1);
     height: 90%;
     width: 50%;
     margin: 0 auto;
     background: white;
-    .get-in-touch {
-        width: 25%;
-        border: 2px solid black;
-        background: white;
-        margin: 4rem auto;
-        padding: 1.2rem 1.4rem;
-        font-size: 1.8rem;
-        cursor: pointer;
-        transition: all 0.4s;
-    }
-    .get-in-touch:hover {
-        background: var(--color-black);
-        color: white;
-        transform: translateY(-0.9rem);
-        box-shadow: 1px 8px 10px -3px #333;
-    }
+
     h3 {
-        padding-top: 4rem;
-        margin: 2rem 0;
-        text-align: center;
-        font-size: 3rem;
+      padding-top: 4rem;
+      margin: 2rem 0;
+      text-align: center;
+      font-size: 3rem;
     }
     form {
       height: 100%;
       display: flex;
       flex-direction: column;
-        .success-message {
-            font-size: 2.2rem;
-            padding-bottom: 4%;
-            text-align: center;
-        }
+      .success-message {
+        font-size: 2.2rem;
+        padding-bottom: 4%;
+        text-align: center;
+      }
       .contact-info {
         display: flex;
         justify-content: space-evenly;
@@ -92,10 +81,38 @@ export const ContactStyled = styled.section`
           border-bottom: 2px solid black;
           &[placeholder] {
             font-size: 2rem;
-            font-family: 'Montserrat', sans-serif;
+            font-family: 'arial', sans-serif;
           }
           &:focus {
             outline: none;
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 1200px) {
+    .form-container {
+      width: 80%;
+    }
+  }
+  @media (max-width: 900px) {
+      margin-top: 25vh;
+  }
+  @media (max-width: 500px) {
+    h2 {
+      margin-bottom: 5rem;
+      margin-top: 25rem;
+    }
+    .form-container {
+      width: 90%;
+      .get-in-touch {
+        width: 50%;
+      }
+      form {
+        .contact-info {
+          flex-direction: column;
+          label {
+            width: 90%;
           }
         }
       }
