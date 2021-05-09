@@ -20,24 +20,6 @@ export const HeaderStyled = styled.div`
       font-size: 2.3rem;
     }
   }
-  .get-in-touch {
-    border: 2px solid black;
-    background: white;
-    margin: 9rem 0;
-    padding: 1.2rem 1.4rem;
-    font-size: 1.8rem;
-    cursor: pointer;
-    transition: all 0.4s;
-  }
-  .get-in-touch:hover {
-    background: var(--color-black);
-    transform: translateY(-0.9rem);
-    box-shadow: 1px 8px 10px -3px #333;
-    a {
-      color: white;
-    }
-  }
-
   @keyframes fade-in {
     0% {
       opacity: 0;
@@ -47,6 +29,40 @@ export const HeaderStyled = styled.div`
     100% {
       opacity: 1;
       transform: translateY(0);
+    }
+  }
+  @media (max-width: 768px) {
+    .header {
+      text-align: left;
+      position: absolute;
+      top: 18%;
+      left: 13%;
+      h1,
+      h2 {
+        padding: 1.2rem 0;
+        font-size: 5.7rem;
+      }
+      p {
+        padding: 1rem 0;
+        font-size: 2.3rem;
+      }
+    }
+  }
+  @media (max-width: 420px) {
+    .header {
+      text-align: left;
+      position: absolute;
+      top: 18%;
+      left: 13%;
+      h1,
+      h2 {
+        padding: 1.2rem 0;
+        font-size: 4.7rem;
+      }
+      p {
+        padding: 1rem 0;
+        font-size: 2.3rem;
+      }
     }
   }
 `;

@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
-
 :root {
   --color-black: black;
   --header-font-size: 7rem;
@@ -24,10 +23,33 @@ body {
   font-family: 'Abel', sans-serif;
   box-sizing: border-box;
   background: #fafafa;
+  color: #333;
 }
 a {
   text-decoration: none;
-  color: black;
+  color: #333;
+}
+
+.get-in-touch {
+  border: none;
+  font-family: 'Abel', sans-serif;
+  font-weight: 800;
+  border-radius: 3px;
+  background: linear-gradient(
+    to right bottom,
+    var(--primary-blue),
+    var(--primary-green)
+  );
+  margin: 9rem 0;
+  padding: 2rem 8rem;
+  font-size: 2.2rem;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+.get-in-touch:hover {
+  transform: translateY(-0.5rem);
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+  opacity: 0.9;
 }
 .icon {
   cursor: pointer;
@@ -77,4 +99,10 @@ section {
 }
 .about-images:hover .about-images__img:not(:hover) {
   transform: scale(0.93);
+}
+
+@media (max-width: 1340px) {
+  section {
+    margin: 0 5%;
+  }
 }

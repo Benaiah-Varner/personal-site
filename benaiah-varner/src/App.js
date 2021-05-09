@@ -45,16 +45,15 @@ function App() {
               </li>
               <li>
                 <a href="#contact">Contact</a>
-              </li>
-              <li className="resume">
+              </li>{' '}
                 <a
                   href="https://drive.google.com/file/d/18oZ8MgZ2IoAeh1JnZo2w1gpJ0mDPZ4aG/view"
                   target="_blank"
                   rel="noreferrer"
+                  className="resume"
                 >
-                  Resume
+                  <li className="res-li">Resume</li>
                 </a>
-              </li>
             </ul>
           </div>
         </div>
@@ -68,10 +67,9 @@ function App() {
             Connecticut based web developer specializing in creating digital
             experiences.
           </p>
-          <button className="btn get-in-touch">
-            {' '}
-            <a href="#contact">Get In Touch</a>
-          </button>
+          <a href="#contact">
+            <button className="btn get-in-touch"> Get In Touch</button>
+          </a>
         </div>
       </HeaderStyled>
       <ProjectsStyled className="projects" id="projects">
@@ -87,13 +85,9 @@ function App() {
               <div className="description__text">
                 <p>
                   Freelance project for a local small business called Ghost &
-                  Grits.
-                  <br />
-                  Small, static generated full stack website using Next.js,
-                  GraphQl, and Apollo Client.
-                  <br />
-                  Styled with react styled components, and back end server built
-                  with KeystoneJS.
+                  Grits. Small, static generated full stack website using
+                  Next.js, GraphQl, and Apollo Client. Styled with react styled
+                  components, and back end server built with KeystoneJS.
                 </p>
               </div>
               <div className="list-icons">
@@ -262,11 +256,13 @@ function App() {
                   RSI to generate buy and sell flags on stock charts.
                 </p>
                 <div className="icon-box">
-                  <FontAwesomeIcon
-                    icon={faGithub}
-                    size="3x"
-                    className="github icon"
-                  />
+                  <a href="https://github.com/Benaiah-Varner/B-T-algotrader" target="_blank" rel="noreferrer">
+                    <FontAwesomeIcon
+                      icon={faGithub}
+                      size="3x"
+                      className="github icon"
+                    />
+                  </a>
                 </div>
               </div>
               <div className="other-project__card">

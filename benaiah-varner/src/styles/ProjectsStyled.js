@@ -1,9 +1,11 @@
 import styled from 'styled-components';
 
 export const ProjectsStyled = styled.section`
+  width: 85%;
   height: auto;
   h2 {
-    margin: 8rem 0;
+    margin-top: 0;
+    margin-bottom: 8rem;
     text-align: center;
     font-size: var(--header-font-size);
   }
@@ -14,12 +16,13 @@ export const ProjectsStyled = styled.section`
       display: flex;
       flex-direction: row-reverse;
       align-items: center;
+      justify-content: center;
       width: 90%;
       .thumbnail {
         background: white;
-        height: 38rem;
-        width: 42rem;
-        border-radius: 10px;
+        height: 42rem;
+        width: 46rem;
+        border-radius: 3px;
         overflow: hidden;
         box-shadow: 7px 15px 18px 3px #d6d6d6;
         width: 60%;
@@ -27,7 +30,7 @@ export const ProjectsStyled = styled.section`
         justify-content: space-around;
         align-items: center;
         img {
-          height: 30rem;
+          height: 34rem;
         }
       }
       .description {
@@ -49,7 +52,7 @@ export const ProjectsStyled = styled.section`
         }
         width: 50%;
         h3 {
-          margin-left: 20%;
+          margin-left: 15%;
           font-size: 1.8rem;
         }
         .title {
@@ -59,22 +62,23 @@ export const ProjectsStyled = styled.section`
         &__text {
           box-shadow: -7px 15px 18px -5px #d6d6d6;
           position: relative;
-          right: -20%;
+          right: -15%;
           border-radius: 3px;
           background-color: #c9f7b0;
           height: 18rem;
+          display: flex;
+          align-items: center;
         }
         p {
           font-size: 1.6rem;
-          padding: 4rem 2rem;
+          padding: 5%;
           line-height: 2.8rem;
         }
         .list-icons {
-          margin-left: 20%;
+          margin-left: 15%;
         }
         ul {
           padding: 1rem 0;
-
           list-style: none;
           display: flex;
           width: 100%;
@@ -97,11 +101,13 @@ export const ProjectsStyled = styled.section`
         }
         .description {
           .featured-icons {
+            padding: 0;
             display: flex;
             flex-direction: row;
             justify-content: flex-end;
           }
           a {
+            margin-right: 0;
             margin-left: 6%;
             display: flex;
             flex-direction: column;
@@ -109,10 +115,9 @@ export const ProjectsStyled = styled.section`
           * {
             margin: 0.9rem 0;
           }
-          width: 50%;
           h3 {
             text-align: right;
-            margin-right: 20%;
+            margin-right: 15%;
             font-size: 1.8rem;
           }
           .title {
@@ -122,31 +127,81 @@ export const ProjectsStyled = styled.section`
           &__text {
             box-shadow: 7px 15px 18px -5px #d6d6d6;
             position: relative;
-            right: 20%;
+            right: 15%;
             border-radius: 3px;
             background-color: #c9f7b0;
             height: 18rem;
           }
           p {
             font-size: 1.6rem;
-            padding: 2rem;
+            padding: 5%;
             line-height: 2.8rem;
           }
           .list-icons {
             text-align: right;
-            margin-right: 20%;
+            margin-right: 15%;
           }
           ul {
-            padding: 1rem 0;
-            list-style: none;
             display: flex;
-            width: 100%;
+            flex-direction: row-reverse;
             li {
-              margin-left: 5%;
               font-size: 1.8rem;
+              margin-right: 0;
+              margin-left: 6%;
             }
           }
         }
+      }
+    }
+  }
+  @media (max-width: 1300px) {
+    width: 95%;
+    .featured-projects__card {
+      width: 95%;
+      margin-left: 0rem;
+      .description {
+        &__text {
+          height: auto;
+          right: 0;
+          p {
+            font-size: 1.6rem;
+            line-height: 2.3rem;
+          }
+        }
+        .list-icons,
+        h3 {
+          margin-right: 0;
+          margin-left: 0;
+        }
+      }
+    }
+  }
+  @media (max-width: 900px) {
+    .featured-projects__card {
+      padding-top: 8rem;
+      flex-direction: column;
+      .thumbnail {
+        width: 95%;
+      }
+      .description {
+        width: 95%;
+        text-align: center;
+        .featured-icons {
+          justify-content: center;
+        }
+        ul {
+          justify-content: center;
+        }
+      }
+      h3 {
+        position: absolute;
+        top: 0;
+        left: 2.5%;
+        font-size: 1.8rem;
+      }
+      .title {
+        top: 2rem;
+        font-size: 2.5rem;
       }
     }
   }
@@ -169,7 +224,7 @@ export const OtherProjectStyled = styled.section`
     &__card {
       background-color: white;
       width: 25%;
-      height: 40rem;
+      height: auto;
       box-shadow: -10px 15px 30px rgba(0, 0, 0, 0.2);
       border-radius: 3px;
       h3 {
@@ -179,7 +234,7 @@ export const OtherProjectStyled = styled.section`
       }
       p {
         font-size: 1.6rem;
-        padding: 2.5rem;
+        padding: 5%;
         line-height: 2.8rem;
         height: 60%;
       }
@@ -190,10 +245,37 @@ export const OtherProjectStyled = styled.section`
         .github {
         }
         a {
+          margin-bottom: 3rem;
           text-align: center;
           display: flex;
           flex-direction: column;
         }
+      }
+    }
+  }
+  @media (max-width: 1200px) {
+    .other-project {
+      &__card {
+        width: 30%;
+      }
+    }
+  }
+  @media (max-width: 900px) {
+    .other-project {
+      height: auto;
+      .other-title {
+        text-align: center;
+        font-size: 4.4rem;
+        margin-bottom: 5rem;
+      }
+      .grid {
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+      }
+      &__card {
+        width: 90%;
+        margin-bottom: 2rem;
       }
     }
   }
