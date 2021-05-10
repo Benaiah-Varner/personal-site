@@ -26,7 +26,7 @@ function App() {
   };
 
   window.addEventListener('scroll', changeBackground);
-
+// product ready
   return (
     <div className="App">
       <div className="header-container"></div>
