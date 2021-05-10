@@ -46,7 +46,7 @@ function App() {
                 <a href="#contact">Contact</a>
               </li>{' '}
                 <a
-                  href="https://drive.google.com/file/d/18oZ8MgZ2IoAeh1JnZo2w1gpJ0mDPZ4aG/view"
+                  href="https://docs.google.com/document/d/1lNy4dFaiMil8A-0U_FuCrgsF9UGj0T8z1mC0xmpWUMg/edit?usp=sharing"
                   target="_blank"
                   rel="noreferrer"
                   className="resume"
