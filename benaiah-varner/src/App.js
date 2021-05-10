@@ -14,7 +14,7 @@ import {
   faLinkedinIn,
 } from '@fortawesome/free-brands-svg-icons';
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
-
+// The font awesome is clearly installed
 function App() {
   const [navbar, setNavbar] = useState(false);
   const changeBackground = () => {
