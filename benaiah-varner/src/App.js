@@ -32,7 +32,7 @@ function App() {
       <NavStyled scrolled={navbar}>
         <div className="nav">
           <div className="logo">
-            <a href="#">BV</a>
+            <a href="#header">BV</a>
           </div>
           <div className="links">
             <ul>
@@ -57,7 +57,7 @@ function App() {
           </div>
         </div>
       </NavStyled>
-      <HeaderStyled>
+      <HeaderStyled id='header'>
         <div className="header">
           <p>Hi! My name is</p>
           <h1>Benaiah Varner</h1>
