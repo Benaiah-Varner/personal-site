@@ -14,7 +14,7 @@ import {
   faLinkedinIn,
 } from '@fortawesome/free-brands-svg-icons';
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
-// The font awesome is clearly installed
+
 function App() {
   const [navbar, setNavbar] = useState(false);
   const changeBackground = () => {
@@ -278,7 +278,7 @@ function App() {
                 </p>
                 <div className="icon-box">
                   <a
-                    href="https://github.com/Benaiah-Varner/noCodeMonkey-RN-component"
+                    href="https://github.com/Benaiah-Varner/Adalo-Video-Background-Component"
                     target="_blank"
                     rel="noreferrer"
                   >
