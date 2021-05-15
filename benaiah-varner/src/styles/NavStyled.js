@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const NavStyled = styled.div`
   .nav {
+    position: relative;
     box-shadow: ${(props) => (props.scrolled ? '0px 0px 5px grey' : 'none')};
     transition: all 0.4s;
     max-width: 100%;
@@ -23,6 +24,64 @@ export const NavStyled = styled.div`
         text-decoration: none;
       }
     }
+    .burger-links {
+      transition: all 0.6s;
+      opacity: ${({ open }) => (open ? '100%' : '0%')};
+      position: absolute;
+      top: 50vh;
+      z-index: 1;
+      right: 50%;
+      transform: translateX(50%) translateY(-50%);
+      font-size: 2.2rem;
+      font-weight: 600;
+      ul {
+        text-align: center;
+        list-style: none;
+        li {
+          margin: 30% 0;
+        }
+      }
+    }
+    .burger-wrapper {
+      position: relative;
+      margin-right: 10%;
+      width: 3rem;
+      height: 3rem;
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: space-around;
+      transform-origin: 1px;
+
+      div:not(.background) {
+        transition: all 0.2s linear;
+        border-bottom: 0.4rem solid #333;
+        border-radius: 1rem;
+        &:nth-child(1) {
+          transform: ${({ open }) =>
+            open ? 'rotate(45deg) translateY(14px)' : 'rotate(0deg)'};
+        }
+        &:nth-child(2) {
+          opacity: ${({ open }) => (open ? '0%' : '100%')};
+        }
+        &:nth-child(3) {
+          transform: ${({ open }) =>
+            open ? 'rotate(-45deg) translateY(-15px)' : 'rotate(0deg)'};
+        }
+      }
+    }
+  }
+  .background {
+    position: absolute;
+    border-radius: 50%;
+    top: 6%;
+    right: 10%;
+    height: 5rem;
+    width: 5rem;
+    z-index: -1;
+    background-color: ${({ open }) =>
+      open ? 'var(--primary-green)' : 'inherit'};
+    transition: all 0.5s;
+    transform: ${({ open }) => (open ? 'scale(80)' : 'scale(1)')};
   }
   .links {
     cursor: pointer;
@@ -85,11 +144,7 @@ export const NavStyled = styled.div`
   }
   @media (max-width: 500px) {
     .nav {
-      justify-content: space-around;
-      .logo {
-        padding-left: 0;
-        font-size: 3rem;
-      }
+      justify-content: space-between;
     }
     .links {
       li {

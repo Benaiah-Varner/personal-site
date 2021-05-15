@@ -9,7 +9,7 @@ const ContactForm = () => {
     email: '',
     message: '',
   });
-  const [resStatus, setResStatus] = useState(false)
+  const [resStatus, setResStatus] = useState(false);
 
   const onChange = (e) => {
     setFormValues({
@@ -31,17 +31,17 @@ const ContactForm = () => {
       .then((res) => {
         console.log(res);
         if (res.status === 200) {
-            setFormValues({
-                first_name: '',
-                last_name: '',
-                phone_number: '',
-                email: '',
-                message: '',
-            })
-            setResStatus(true)
+          setFormValues({
+            first_name: '',
+            last_name: '',
+            phone_number: '',
+            email: '',
+            message: '',
+          });
+          setResStatus(true);
         } else {
-            setResStatus(false)
-            // setFormValues(formValues);
+          setResStatus(false);
+          // setFormValues(formValues);
         }
       })
       .catch((err) => {
@@ -113,7 +113,9 @@ const ContactForm = () => {
               ></textarea>
             </label>
           </div>
-          <button className="get-in-touch">Send Message</button>
+          <button className="get-in-touch">
+            <p>Send Message</p>
+          </button>
 
           {resStatus && <p className="success-message">Message Sent!</p>}
         </form>
