@@ -1,9 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './App.css';
 import { HeaderStyled } from './styles/HeaderStyled';
 import { AboutStyled } from './styles/AboutStyled';
 import { FooterStyled } from './styles/FooterStyled';
-import { NavStyled } from './styles/NavStyled';
 import { ContactStyled } from './styles/ContactStyled';
 import { ProjectsStyled, OtherProjectStyled } from './styles/ProjectsStyled';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
