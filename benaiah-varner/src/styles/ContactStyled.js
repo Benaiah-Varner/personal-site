@@ -106,7 +106,9 @@ export const ContactStyled = styled.section`
     .form-container {
       width: 90%;
       .get-in-touch {
-        width: 50%;
+        padding: 1rem 4rem;
+        width: 70%;
+        font-size: 1.8rem;
       }
       form {
         .contact-info {
