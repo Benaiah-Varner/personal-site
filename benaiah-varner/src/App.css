@@ -19,11 +19,16 @@ html {
   box-sizing: inherit;
 }
 
+.App {
+  position: relative;
+}
+
 body {
   font-family: 'Abel', sans-serif;
   box-sizing: border-box;
   background: #fafafa;
   color: #333;
+  overflow-x: hidden;
 }
 a {
   text-decoration: none;

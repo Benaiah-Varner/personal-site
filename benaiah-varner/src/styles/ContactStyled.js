@@ -11,7 +11,11 @@ export const ContactStyled = styled.section`
   }
   .get-in-touch {
     margin: 5rem auto;
-    width: 43%;
+    width: 40%;
+    padding: 1.5rem 4rem;
+    p {
+      display: block;
+    }
   }
   .form-container {
     border-radius: 3px;
@@ -95,10 +99,15 @@ export const ContactStyled = styled.section`
       width: 80%;
     }
   }
-  @media (max-width: 900px) {
-      margin-top: 25vh;
+  @media (max-width: 910px) {
+    margin-top: 25vh;
+    .form-container {
+      .get-in-touch {
+        font-size: 1.8rem;
+      }
+    }
   }
-  @media (max-width: 500px) {
+  @media (max-width: 625px) {
     h2 {
       margin-bottom: 5rem;
       margin-top: 25rem;
@@ -107,8 +116,7 @@ export const ContactStyled = styled.section`
       width: 90%;
       .get-in-touch {
         padding: 1rem 4rem;
-        width: 70%;
-        font-size: 1.8rem;
+        width: 50%;
       }
       form {
         .contact-info {

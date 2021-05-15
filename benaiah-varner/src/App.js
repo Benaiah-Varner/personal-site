@@ -8,6 +8,7 @@ import { ContactStyled } from './styles/ContactStyled';
 import { ProjectsStyled, OtherProjectStyled } from './styles/ProjectsStyled';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import ContactForm from './components/ContactForm';
+import Header from './components/NavBar';
 import {
   faGithub,
   faTwitter,
@@ -16,48 +17,11 @@ import {
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 
 function App() {
-  const [navbar, setNavbar] = useState(false);
-  const changeBackground = () => {
-    if (window.scrollY > 0) {
-      setNavbar(true);
-    } else {
-      setNavbar(false);
-    }
-  };
-
-  window.addEventListener('scroll', changeBackground);
   return (
     <div className="App">
       <div className="header-container"></div>
-      <NavStyled scrolled={navbar}>
-        <div className="nav">
-          <div className="logo">
-            <a href="#header">BV</a>
-          </div>
-          <div className="links">
-            <ul>
-              <li>
-                <a href="#projects">Projects</a>
-              </li>
-              <li>
-                <a href="#about">About</a>
-              </li>
-              <li>
-                <a href="#contact">Contact</a>
-              </li>{' '}
-                <a
-                  href="https://docs.google.com/document/d/1lNy4dFaiMil8A-0U_FuCrgsF9UGj0T8z1mC0xmpWUMg/edit?usp=sharing"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="resume"
-                >
-                  <li className="res-li">Resume</li>
-                </a>
-            </ul>
-          </div>
-        </div>
-      </NavStyled>
-      <HeaderStyled id='header'>
+      <Header />
+      <HeaderStyled id="header">
         <div className="header">
           <p>Hi! My name is</p>
           <h1>Benaiah Varner</h1>
@@ -255,7 +219,11 @@ function App() {
                   RSI to generate buy and sell flags on stock charts.
                 </p>
                 <div className="icon-box">
-                  <a href="https://github.com/Benaiah-Varner/B-T-algotrader" target="_blank" rel="noreferrer">
+                  <a
+                    href="https://github.com/Benaiah-Varner/B-T-algotrader"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     <FontAwesomeIcon
                       icon={faGithub}
                       size="3x"
