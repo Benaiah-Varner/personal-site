@@ -20,6 +20,7 @@ export const HeaderStyled = styled.div`
       font-size: 2.3rem;
     }
   }
+
   @keyframes fade-in {
     0% {
       opacity: 0;
@@ -31,6 +32,7 @@ export const HeaderStyled = styled.div`
       transform: translateY(0);
     }
   }
+
   @media (max-width: 768px) {
     .header {
       text-align: left;
@@ -48,6 +50,7 @@ export const HeaderStyled = styled.div`
       }
     }
   }
+  
   @media (max-width: 420px) {
     .header {
       text-align: left;

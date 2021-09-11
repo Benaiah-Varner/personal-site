@@ -39,27 +39,96 @@ function App() {
         <div className="featured-projects">
           <div className="featured-projects__card">
             <div className="thumbnail">
-              <img src="/images/ghost-grits.png" alt="" />
+              <img src="/images/leagueDay.png" alt="" style={{ borderRadius: '5px' }} />
             </div>
             <div className="description">
               <h3>Featured Project</h3>
-              <h3 className="title">Ghost & Grits</h3>
+              <h3 className="title">LeagueDay</h3>
               <div className="description__text">
+                <p>
+                  LeagueDay is a PWA Esports platform for audio-only Esports casting, and user-generated livestreaming and podcasts. As a full-stack engineer I was tasked with designing and building new features for the app, such as user profiles, user generated live streams and podcasts, ability to send and recieve friend requests, chat 1on1 with friends, a public party chat for livestreams, and more.
+                </p>
+              </div>
+              <div className="list-icons">
+                <ul>
+                  <li>React.js</li>
+                  <li>Redux</li>
+                  <li>MongoDB</li>
+                  <li>Material UI</li>
+                </ul>
+                <div className="featured-icons">
+                  <a
+                    href="https://app.leagueday.gg/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <FontAwesomeIcon
+                      className="icon"
+                      icon={faExternalLinkAlt}
+                      size="3x"
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="featured-projects__card featured-projects__card--2">
+            <div className="thumbnail">
+              <img src="/images/orats.png" alt="" style={{ borderRadius: '5px' }}/>
+            </div>
+            <div className="description">
+              <h3>Featured Project</h3>
+              <h3 className="title">ORATS</h3>
+              <div className="description__text">
+                <p>
+                  My team and I were tasked with reducing the time a family
+                  spends filling out the intake forms and adding some user
+                  functionality, as well as email notifications. We achieved
+                  this by integrating DocuSign into the intake form process,
+                  adding edit profile functionality, utilizing SendGrid's API
+                  for email notifications, and optimizing UX by redesigning the
+                  guest user flow.
+                </p>
+              </div>
+              <div className="list-icons">
+                <ul>
+                  <li>Next.js</li>
+                  <li>Styled Components</li>
+                  <li>Node.js</li>
+                </ul>
+                <div className="featured-icons">
+                  <a
+                    href="https://www.orats.com/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <FontAwesomeIcon
+                      icon={faExternalLinkAlt}
+                      size="3x"
+                      className="github icon"
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ProjectsStyled>
+      <div className="other-project-wrapper">
+        <div className="other-project-background"></div>
+        <OtherProjectStyled>
+          <div className="other-project">
+            <h2 className="other-title">Other awesome projects</h2>
+            <div className="grid">
+              <div className="other-project__card">
+                <h3 className="other-project__card__header">Ghost & Grits</h3>
                 <p>
                   Freelance project for a local small business called Ghost &
                   Grits. Small, static generated full stack website using
                   Next.js, GraphQl, and Apollo Client. Styled with react styled
                   components, and back end server built with KeystoneJS.
                 </p>
-              </div>
-              <div className="list-icons">
-                <ul>
-                  <li>Next.js</li>
-                  <li>GraphQl</li>
-                  <li>MongoDB</li>
-                  <li>Keystone.js</li>
-                </ul>
-                <div className="featured-icons">
+                <div className="icon-box">
                   <a
                     href="https://github.com/Benaiah-Varner/ghost-grits-front-end"
                     target="_blank"
@@ -84,47 +153,20 @@ function App() {
                     />
                     Back End
                   </a>
-                  <a
-                    href="https://ghost-grits-front-end.vercel.app/"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <FontAwesomeIcon
-                      className="icon"
-                      icon={faExternalLinkAlt}
-                      size="3x"
-                    />
-                  </a>
                 </div>
               </div>
-            </div>
-          </div>
-          <div className="featured-projects__card featured-projects__card--2">
-            <div className="thumbnail">
-              <img src="/images/checkin2.png" alt="" />
-            </div>
-            <div className="description">
-              <h3>Featured Project</h3>
-              <h3 className="title">Family Promise</h3>
-              <div className="description__text">
+              <div className="other-project__card">
+                <h3 className="other-project__card__header">Family Promise</h3>
                 <p>
                   My team and I were tasked with reducing the time a family
-                  spends filling out the intake forms and adding some user
+                  spends filling out intake forms and adding some user
                   functionality, as well as email notifications. We achieved
                   this by integrating DocuSign into the intake form process,
                   adding edit profile functionality, utilizing SendGrid's API
                   for email notifications, and optimizing UX by redesigning the
                   guest user flow.
                 </p>
-              </div>
-              <div className="list-icons">
-                <ul>
-                  <li>React.js</li>
-                  <li>Redux</li>
-                  <li>Node.js</li>
-                  <li>Express</li>
-                </ul>
-                <div className="featured-icons">
+                <div className="icon-box">
                   <a
                     href="https://github.com/Benaiah-Varner/family-promise-spokane-fe-a"
                     target="_blank"
@@ -149,31 +191,10 @@ function App() {
                     />
                     Back End
                   </a>
-                  <a
-                    href="https://www.familypromiseofspokane.org/"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <FontAwesomeIcon
-                      icon={faExternalLinkAlt}
-                      size="3x"
-                      className="github icon"
-                    />
-                  </a>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-      </ProjectsStyled>
-      <div className="other-project-wrapper">
-        <div className="other-project-background"></div>
-        <OtherProjectStyled>
-          <div className="other-project">
-            <h2 className="other-title">Other awesome projects</h2>
-            <div className="grid">
               <div className="other-project__card">
-                <h3>Co-Make</h3>
+                <h3 className="other-project__card__header">Co-Make</h3>
                 <p>
                   Built during a Lambda School "Build Week" with a team
                   consisting of me and 4 other web developers. I built a RESTful
@@ -205,55 +226,6 @@ function App() {
                       size="3x"
                     />
                     Back End
-                  </a>
-                </div>
-              </div>
-              <div className="other-project__card">
-                <h3>Automated trader</h3>
-                <p>
-                  - Side project started by me and a friend
-                  <br />
-                  - Built with Python, numpy, pandas, and sklearn
-                  <br />- Uses technical indicators such as SMA, EMA, MACD, and
-                  RSI to generate buy and sell flags on stock charts.
-                </p>
-                <div className="icon-box">
-                  <a
-                    href="https://github.com/Benaiah-Varner/B-T-algotrader"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <FontAwesomeIcon
-                      icon={faGithub}
-                      size="3x"
-                      className="github icon"
-                    />
-                  </a>
-                </div>
-              </div>
-              <div className="other-project__card">
-                <h3>NoCodeMonkey.io Component</h3>
-                <p>
-                  - Freelance project for NoCodeMonkey.io
-                  <br />
-                  - A user uploads a video URI to Adalo and the video is
-                  dynamically rendered as the background of their phone screen
-                  <br />
-                  - Built with React Native and itilizes Adalo API to fetch
-                  video URI
-                  <br />
-                </p>
-                <div className="icon-box">
-                  <a
-                    href="https://github.com/Benaiah-Varner/Adalo-Video-Background-Component"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <FontAwesomeIcon
-                      icon={faGithub}
-                      size="3x"
-                      className="github icon"
-                    />
                   </a>
                 </div>
               </div>
@@ -327,6 +299,7 @@ function App() {
               href="https://twitter.com/BenaiahVarner"
               target="_blank"
               rel="noreferrer"
+              className="social-icon"
             >
               <FontAwesomeIcon className="footer-icon" icon={faTwitter} />
             </a>
@@ -334,6 +307,7 @@ function App() {
               href="https://github.com/Benaiah-Varner"
               target="_blank"
               rel="noreferrer"
+              className="social-icon"
             >
               <FontAwesomeIcon className="footer-icon" icon={faGithub} />
             </a>
@@ -341,6 +315,7 @@ function App() {
               href="https://www.linkedin.com/in/benaiahvarner/"
               target="_blank"
               rel="noreferrer"
+              className="social-icon"
             >
               <FontAwesomeIcon className="footer-icon" icon={faLinkedinIn} />
             </a>

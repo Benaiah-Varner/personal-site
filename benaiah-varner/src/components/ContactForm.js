@@ -20,7 +20,6 @@ const ContactForm = () => {
 
   const sendEmail = (e) => {
     e.preventDefault();
-
     emailjs
       .send(
         'service_uvu3b4x',
@@ -41,7 +40,6 @@ const ContactForm = () => {
           setResStatus(true);
         } else {
           setResStatus(false);
-          // setFormValues(formValues);
         }
       })
       .catch((err) => {

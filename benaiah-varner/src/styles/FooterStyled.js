@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const FooterStyled = styled.div`
     position: absolute;
     height: 70vh;
-    z-index: -1;
+    z-index: 0;
     bottom: 0;
     background: linear-gradient(to right bottom, var(--primary-blue), var(--primary-green));
     width: 100%;
@@ -26,5 +26,8 @@ export const FooterStyled = styled.div`
   top: 0;
   left: 0;
   background: linear-gradient(#fafafa 0%, transparent 100%);
+}
+.social-icon {
+    cursor: pointer;
 }
 `;

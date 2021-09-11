@@ -222,6 +222,7 @@ export const OtherProjectStyled = styled.section`
       margin-bottom: 15rem;
     }
     &__card {
+      min-height: 388px;
       background-color: white;
       width: 25%;
       height: auto;
@@ -234,7 +235,7 @@ export const OtherProjectStyled = styled.section`
       }
       p {
         font-size: 1.6rem;
-        padding: 5%;
+        padding: 0 5%;
         line-height: 2.8rem;
         height: 60%;
       }

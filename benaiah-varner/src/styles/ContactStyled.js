@@ -4,6 +4,8 @@ export const ContactStyled = styled.section`
   height: auto;
   margin-bottom: 25vh;
   margin-top: 8vh;
+  position: relative;
+  z-index: 1;
   h2 {
     text-align: center;
     margin-bottom: 8rem;
