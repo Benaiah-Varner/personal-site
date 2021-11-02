@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import './App.css';
 import { HeaderStyled } from './styles/HeaderStyled';
 import { AboutStyled } from './styles/AboutStyled';
@@ -16,6 +16,48 @@ import {
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 
 function App() {
+  const [projectsVisible, setProjectsVisible] = useState(false)
+  const [otherProjVisible, setOtherProjVisible] = useState(false)
+  const [aboutVisible, setAboutVisible] = useState(false)
+  const aboutRef = useRef()
+  const projectsRef = useRef();
+  const otherProjectsRef = useRef();
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting)
+          setProjectsVisible(true)
+      }
+      );
+    });
+
+    const otherProjObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting)
+          setOtherProjVisible(true)
+      }
+      );
+    });
+
+    const aboutObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting)
+          setAboutVisible(true)
+      }
+      );
+    });
+
+    observer.observe(projectsRef.current);
+    otherProjObserver.observe(otherProjectsRef.current);
+    aboutObserver.observe(aboutRef.current)
+
+    return () => {
+      observer.unobserve(projectsRef.current)
+      otherProjObserver.unobserve(otherProjectsRef.current)
+    };
+  }, []);
+
   return (
     <div className="App">
       <div className="header-container"></div>
@@ -34,7 +76,7 @@ function App() {
           </a>
         </div>
       </HeaderStyled>
-      <ProjectsStyled className="projects" id="projects">
+      <ProjectsStyled className={`projects ${projectsVisible ? 'is-visible' : ''}`} id="projects" ref={projectsRef}>
         <h2>Projects</h2>
         <div className="featured-projects">
           <div className="featured-projects__card">
@@ -74,7 +116,7 @@ function App() {
           </div>
           <div className="featured-projects__card featured-projects__card--2">
             <div className="thumbnail">
-              <img src="/images/orats.png" alt="" style={{ borderRadius: '5px' }}/>
+              <img src="/images/orats.png" alt="" style={{ borderRadius: '5px' }} />
             </div>
             <div className="description">
               <h3>Featured Project</h3>
@@ -117,10 +159,10 @@ function App() {
       <div className="other-project-wrapper">
         <div className="other-project-background"></div>
         <OtherProjectStyled>
-          <div className="other-project">
-            <h2 className="other-title">Other awesome projects</h2>
+          <div className="other-project" ref={otherProjectsRef}>
+            <h2 className={`other-title ${otherProjVisible ? 'is-visible' : ''}`}>Other awesome projects</h2>
             <div className="grid">
-              <div className="other-project__card">
+              <div className={`other-project__card ${otherProjVisible ? 'is-visible-1' : ''}`}>
                 <h3 className="other-project__card__header">Ghost & Grits</h3>
                 <p>
                   Freelance project for a local small business called Ghost &
@@ -155,7 +197,7 @@ function App() {
                   </a>
                 </div>
               </div>
-              <div className="other-project__card">
+              <div className={`other-project__card ${otherProjVisible ? 'is-visible-2' : ''}`}>
                 <h3 className="other-project__card__header">Family Promise</h3>
                 <p>
                   My team and I were tasked with reducing the time a family
@@ -193,7 +235,7 @@ function App() {
                   </a>
                 </div>
               </div>
-              <div className="other-project__card">
+              <div className={`other-project__card ${otherProjVisible ? 'is-visible-3' : ''}`}>
                 <h3 className="other-project__card__header">Co-Make</h3>
                 <p>
                   Built during a Lambda School "Build Week" with a team
@@ -233,11 +275,11 @@ function App() {
           </div>
         </OtherProjectStyled>
       </div>
-      <AboutStyled id="about">
-        <h2>About Me</h2>
+      <AboutStyled id="about" ref={aboutRef}>
+        <h2 style={{ transition: 'all 1s ease-in-out', opacity: aboutVisible ? 1 : 0, transform: aboutVisible ? 'translateY(0)' : 'translateY(5rem)' }}>About Me</h2>
         <div className="row">
           <div className="about-text">
-            <div className="background">
+            <div className={`background ${otherProjVisible ? 'is-visible' : ''}`}>
               <span>Background</span>
               <p>
                 Hello, my name is Benaiah Varner, I am a full stack web
@@ -248,7 +290,7 @@ function App() {
                 freelance opportunities!
               </p>
             </div>
-            <div className="technical-skills">
+            <div className={`technical-skills ${otherProjVisible ? 'is-visible' : ''}`}>
               <span>Technical Skills</span>
               <ul>
                 <div>

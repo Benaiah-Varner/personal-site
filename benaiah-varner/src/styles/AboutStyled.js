@@ -16,6 +16,9 @@ export const AboutStyled = styled.section`
       width: 50%;
       position: relative;
       height: auto;
+      opacity: 0;
+      transform: translateY(5rem);
+      transition: all 1s ease-in-out;
       p {
         margin: 8rem 3rem 3rem 3rem;
         padding-top: 20%;
@@ -24,13 +27,26 @@ export const AboutStyled = styled.section`
         line-height: 3rem;
       }
     }
+    .background.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+      transition-delay: .5s
+    }
     .technical-skills {
+      opacity: 0;
+      transform: translateY(5rem);
+      transition: all 1s ease-in-out;
       border-radius: 3px;
       margin-top: 2%;
       width: 50%;
       position: relative;
       background-color: rgba(195, 244, 239, 0.55);
       box-shadow: 1px 2px 9px 0px #d6d6d6;
+    }
+    .technical-skills.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+      transition-delay: 1s
     }
     span {
       position: absolute;

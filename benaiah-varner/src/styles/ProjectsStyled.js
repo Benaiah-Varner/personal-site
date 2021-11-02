@@ -220,8 +220,18 @@ export const OtherProjectStyled = styled.section`
       text-align: center;
       font-size: 4.4rem;
       margin-bottom: 15rem;
+      opacity: 0;
+      transform: translateY(5rem);
+      transition: all 1s ease-in-out;
+    }
+    .other-title.is-visible {
+      opacity: 1;
+      transform: translateY(0);
     }
     &__card {
+      opacity: 0;
+      transform: translateY(5rem);
+      transition: all 0.6s ease-in-out;
       min-height: 388px;
       background-color: white;
       width: 25%;
@@ -253,7 +263,23 @@ export const OtherProjectStyled = styled.section`
         }
       }
     }
+    &__card.is-visible-1 {
+      opacity: 1;
+      transform: translateY(0);
+      transition-delay: .3s
+    }
+    &__card.is-visible-2 {
+      opacity: 1;
+      transform: translateY(0);
+      transition-delay: .6s
+    }
+    &__card.is-visible-3 {
+      opacity: 1;
+      transform: translateY(0);
+      transition-delay: .9s
+    }
   }
+
   @media (max-width: 1200px) {
     .other-project {
       &__card {
