@@ -14,6 +14,7 @@ export const ProjectsStyled = styled.section`
       margin-left: 5rem;
       position: relative;
       display: flex;
+      margin-top: 15rem;
       flex-direction: row-reverse;
       align-items: center;
       justify-content: center;
@@ -33,6 +34,7 @@ export const ProjectsStyled = styled.section`
           height: 34rem;
         }
       }
+      
       .description {
         .github {
           margin-right: 2rem;
@@ -157,6 +159,7 @@ export const ProjectsStyled = styled.section`
   @media (max-width: 1300px) {
     width: 95%;
     .featured-projects__card {
+      
       width: 95%;
       margin-left: 0rem;
       .description {
@@ -178,6 +181,7 @@ export const ProjectsStyled = styled.section`
   }
   @media (max-width: 900px) {
     .featured-projects__card {
+      margin-top: 7rem;
       padding-top: 8rem;
       flex-direction: column;
       .thumbnail {
@@ -204,6 +208,9 @@ export const ProjectsStyled = styled.section`
         font-size: 2.5rem;
       }
     }
+    .featured-projects__card--2 {
+      margin-bottom: 7rem;
+    } 
   }
 `;
 
@@ -211,6 +218,14 @@ export const OtherProjectStyled = styled.section`
   margin-top: 10rem;
   .other-project {
     height: 80rem;
+    .other-icons {
+      position: absolute;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+          display: flex;
+          justify-content: center;
+        }
     .grid {
       display: flex;
       flex-wrap: wrap;
@@ -249,14 +264,19 @@ export const OtherProjectStyled = styled.section`
         line-height: 2.8rem;
         height: 60%;
       }
+      ul {
+        font-size: 1.6rem;
+        padding: 0 5%;
+        padding-left: 10%;
+        line-height: 2.5rem;
+        height: 60%;
+      }
       .icon-box {
         display: flex;
         justify-content: space-evenly;
         text-align: center;
-        .github {
-        }
         a {
-          margin-bottom: 3rem;
+          margin-bottom: 2rem;
           text-align: center;
           display: flex;
           flex-direction: column;
@@ -302,6 +322,7 @@ export const OtherProjectStyled = styled.section`
       }
       &__card {
         width: 90%;
+        position: relative;
         margin-bottom: 2rem;
       }
     }

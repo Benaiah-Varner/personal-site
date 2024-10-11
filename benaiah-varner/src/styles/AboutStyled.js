@@ -1,13 +1,16 @@
 import styled from 'styled-components';
 
 export const AboutStyled = styled.section`
-  height: 100rem;
+  margin-bottom: 15rem;
   h2 {
-    margin-bottom: 4rem;
+    margin-bottom: 15rem;
     text-align: center;
     font-size: var(--header-font-size);
   }
   .about-text {
+    display: flex;
+    align-items: center;
+    gap: 50px;
     .background {
       box-shadow: 1px 2px 9px 0px #d6d6d6;
       border-radius: 3px;
@@ -15,7 +18,7 @@ export const AboutStyled = styled.section`
       background-color: #c9f7b0;
       width: 50%;
       position: relative;
-      height: auto;
+      height: 365px;
       opacity: 0;
       transform: translateY(5rem);
       transition: all 1s ease-in-out;
@@ -37,7 +40,6 @@ export const AboutStyled = styled.section`
       transform: translateY(5rem);
       transition: all 1s ease-in-out;
       border-radius: 3px;
-      margin-top: 2%;
       width: 50%;
       position: relative;
       background-color: rgba(195, 244, 239, 0.55);
@@ -128,13 +130,15 @@ export const AboutStyled = styled.section`
     }
   }
   @media (max-width: 900px) {
-    .row {
-      height: auto;
-      flex-direction: column;
+    margin-bottom: 7rem;
+    h2 {
+    margin-bottom: 7rem;
     }
     .about-text {
+      flex-direction: column;
       .background {
         width: 95%;
+        height: auto;
         p {
           margin: 6rem 3rem 3rem 3rem;
         }
@@ -166,12 +170,6 @@ export const AboutStyled = styled.section`
   }
   @media(max-width: 700px) {
     height: 73rem;
-    .about-images {
-      height: 1rem;
-      &__img {
-   display: none;
-      }
-    }
   }
   @media (max-width: 500px) {
     .about-text {

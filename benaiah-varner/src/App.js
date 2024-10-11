@@ -56,6 +56,7 @@ function App() {
     return () => {
       observer.unobserve(projectsRef.current)
       otherProjObserver.unobserve(otherProjectsRef.current)
+      aboutObserver.unobserve(aboutRef.current)
     };
   }, []);
 
@@ -69,7 +70,7 @@ function App() {
           <h1>Benaiah Varner</h1>
           <h2>I am a Software Engineer</h2>
           <p>
-            Connecticut based web developer specializing in creating digital
+            Tampa based web developer specializing in creating digital
             experiences.
           </p>
           <a href="#contact">
@@ -82,26 +83,29 @@ function App() {
         <div className="featured-projects">
           <div className="featured-projects__card">
             <div className="thumbnail">
-              <img src="/images/leagueDay.png" alt="" style={{ borderRadius: '5px' }} />
+              <img src="/images/corsair.png" alt="" style={{ borderRadius: '5px' }} />
             </div>
             <div className="description">
               <h3>Featured Project</h3>
-              <h3 className="title">LeagueDay</h3>
+              <h3 className="title">Corsair</h3>
               <div className="description__text">
                 <p>
-                  LeagueDay is a PWA Esports platform for audio-only Esports casting, and user-generated livestreaming and podcasts. As a full-stack engineer I was tasked with designing and building new features for the app, such as user profiles, user generated live streams and podcasts, ability to send and recieve friend requests, chat 1on1 with friends, a public party chat for livestreams, and more.
+                  - Worked on a SCRUM team of around 15 engineers and SSTs over a 10 month period to build Corsair’s PWA<br></br>
+                  - Integrated Shopify on the backend to handle customer account creation and orders<br></br>
+                  - Used NextJS, Tailwind CSS, SASS, and GraphQL to build frontend components<br></br>
                 </p>
               </div>
               <div className="list-icons">
                 <ul>
-                  <li>React.js</li>
-                  <li>Redux</li>
-                  <li>MongoDB</li>
-                  <li>Material UI</li>
+                  <li>NextJS</li>
+                  <li>GraphQL</li>
+                  <li>Contentful</li>
+                  <li>Shopify</li>
+                  <li>Tailwind CSS</li>
                 </ul>
                 <div className="featured-icons">
                   <a
-                    href="https://app.leagueday.gg/"
+                    href="https://www.corsair.com/us/en"
                     target="_blank"
                     rel="noreferrer"
                   >
@@ -117,31 +121,102 @@ function App() {
           </div>
           <div className="featured-projects__card featured-projects__card--2">
             <div className="thumbnail">
-              <img src="/images/orats.png" alt="" style={{ borderRadius: '5px' }} />
+              <img src="/images/whoop-thumbnail.png" alt="" style={{ borderRadius: '5px' }} />
             </div>
             <div className="description">
               <h3>Featured Project</h3>
-              <h3 className="title">ORATS</h3>
+              <h3 className="title">Whoop</h3>
               <div className="description__text">
                 <p>
-                  My team and I were tasked with reducing the time a family
-                  spends filling out the intake forms and adding some user
-                  functionality, as well as email notifications. We achieved
-                  this by integrating DocuSign into the intake form process,
-                  adding edit profile functionality, utilizing SendGrid's API
-                  for email notifications, and optimizing UX by redesigning the
-                  guest user flow.
+                  - Built navbar/megamenu on all whoop.com pages <br></br>
+                  - Built a build caching system to speed up Vercel build times, lowering built times from 40 mins to 25 mins <br></br>
+                  - Used VWO and Dynamic Yield to create A/B CRO tests <br></br>
                 </p>
               </div>
               <div className="list-icons">
                 <ul>
                   <li>Next.js</li>
-                  <li>Styled Components</li>
-                  <li>Node.js</li>
+                  <li>GraphQL</li>
+                  <li>Contentful</li>
                 </ul>
                 <div className="featured-icons">
                   <a
-                    href="https://www.orats.com/"
+                    href="https://www.whoop.com/us/en/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <FontAwesomeIcon
+                      icon={faExternalLinkAlt}
+                      size="3x"
+                      className="github icon"
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="featured-projects__card">
+            <div className="thumbnail">
+              <img src="/images/triprecs.png" alt="" style={{ borderRadius: '5px' }} />
+            </div>
+            <div className="description">
+              <h3>Featured Project</h3>
+              <h3 className="title">Triprecs</h3>
+              <div className="description__text">
+                <p>
+                  - Serverless AI travel agent, made to suggest travel destinations, build itinerary, and offer booking options <br></br>
+                  - Help design UI/UX and repository architecture<br></br>
+                  - Used NextJS 13 and Material UI on the frontend, OpenAI API and Supabase on the backend to generate suggestions and store user data.<br></br>
+                </p>
+              </div>
+              <div className="list-icons">
+                <ul>
+                  <li>Next.js</li>
+                  <li>OpenAI</li>
+                  <li>Supabase SQL</li>
+                  <li>Material UI</li>
+                </ul>
+                <div className="featured-icons">
+                  <a
+                    href="https://www.triprecs.io"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <FontAwesomeIcon
+                      className="icon"
+                      icon={faExternalLinkAlt}
+                      size="3x"
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="featured-projects__card featured-projects__card--2">
+            <div className="thumbnail">
+              <img src="/images/gnc.png" alt="" style={{ borderRadius: '5px' }} />
+            </div>
+            <div className="description">
+              <h3>Featured Project</h3>
+              <h3 className="title">GNC</h3>
+              <div className="description__text">
+                <p>
+                  - Worked on the GNC PWA scrum team of 20 engineers and SSTs <br></br>
+                  - Used NextJS, GraphQL, and contentful to create CMS pages and content <br></br>
+                  - Integrated APIM and Fabric on the backend to handle products, customers, and orders. <br></br>
+                  - Integrated Algolia on the frontend to handle product search, PLP and PDP pages
+                </p>
+              </div>
+              <div className="list-icons">
+                <ul>
+                  <li>Next.js</li>
+                  <li>GraphQL</li>
+                  <li>Node.js</li>
+                  <li>APIM</li>
+                </ul>
+                <div className="featured-icons">
+                  <a
+                    href="https://www.gnc.com/"
                     target="_blank"
                     rel="noreferrer"
                   >
@@ -164,111 +239,68 @@ function App() {
             <h2 className={`other-title ${otherProjVisible ? 'is-visible' : ''}`}>Other awesome projects</h2>
             <div className="grid">
               <div className={`other-project__card ${otherProjVisible ? 'is-visible-1' : ''}`}>
-                <h3 className="other-project__card__header">Ghost & Grits</h3>
-                <p>
-                  Freelance project for a local small business called Ghost &
-                  Grits. Small, static generated full stack website using
-                  Next.js, GraphQl, and Apollo Client. Styled with react styled
-                  components, and back end server built with KeystoneJS.
-                </p>
-                <div className="icon-box">
+                <h3 className="other-project__card__header">ORATS</h3>
+                <ul>
+                  <li>Worked as lead front end developer building their Next.js/Tailwind CSS website</li>
+                  <li>debugged issues with their options scanner to ensure more accurate scan results</li>
+                  <li>Optimized sites performance using lighthouse audit </li>
+                  <li>Utilized: Next.js | Node.js | Tailwind CSS</li>
+                </ul>
+                <div className="other-icons">
                   <a
-                    href="https://github.com/Benaiah-Varner/ghost-grits-front-end"
+                    href="https://orats.com/"
                     target="_blank"
                     rel="noreferrer"
                   >
                     <FontAwesomeIcon
-                      icon={faGithub}
+                      className="icon"
+                      icon={faExternalLinkAlt}
                       size="3x"
-                      className="github icon"
                     />
-                    Front End
-                  </a>
-                  <a
-                    href="https://github.com/Benaiah-Varner/ghost-grits-server"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <FontAwesomeIcon
-                      icon={faGithub}
-                      size="3x"
-                      className="github icon"
-                    />
-                    Back End
                   </a>
                 </div>
               </div>
               <div className={`other-project__card ${otherProjVisible ? 'is-visible-2' : ''}`}>
-                <h3 className="other-project__card__header">Family Promise</h3>
-                <p>
-                  My team and I were tasked with reducing the time a family
-                  spends filling out intake forms and adding some user
-                  functionality, as well as email notifications. We achieved
-                  this by integrating DocuSign into the intake form process,
-                  adding edit profile functionality, utilizing SendGrid's API
-                  for email notifications, and optimizing UX by redesigning the
-                  guest user flow.
-                </p>
-                <div className="icon-box">
+                <h3 className="other-project__card__header">LeagueDay</h3>
+                <ul>
+                  <li>A small Esports startup focused on audio live streaming and podcasts</li>
+                  <li>Designed and built front end using react, redux, material UI, and react context API</li>
+                  <li>Used Mux Livestream library to build a user-generated live streaming feature</li>
+                  <li>Built backend server and API with MongoDB, node.js, and Socket.io for sending and receiving chats, friend requests, and posting comments</li>
+                </ul>
+                <div className="other-icons">
                   <a
-                    href="https://github.com/Benaiah-Varner/family-promise-spokane-fe-a"
+                    href="https://github.com/leagueday/pwa"
                     target="_blank"
                     rel="noreferrer"
                   >
                     <FontAwesomeIcon
                       className="icon"
-                      icon={faGithub}
+                      icon={faExternalLinkAlt}
                       size="3x"
                     />
-                    Front End
-                  </a>
-                  <a
-                    href="https://github.com/Benaiah-Varner/family-promise-spokane-be-a"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <FontAwesomeIcon
-                      className="icon"
-                      icon={faGithub}
-                      size="3x"
-                    />
-                    Back End
                   </a>
                 </div>
               </div>
               <div className={`other-project__card ${otherProjVisible ? 'is-visible-3' : ''}`}>
-                <h3 className="other-project__card__header">Co-Make</h3>
-                <p>
-                  Built during a Lambda School "Build Week" with a team
-                  consisting of me and 4 other web developers. I built a RESTful
-                  API node.js server, designed and built the database, and wrote
-                  tests for each endpoint with a teammate. Also designed and
-                  built homepage, navbar, and footer.
-                </p>
-                <div className="icon-box">
+                <h3 className="other-project__card__header">Magid Glove</h3>
+                <ul>
+                  <li>Helped create CRO test ideas and set up a/b tests in VWO</li>
+                  <li>Built tests using HTML, CSS, and JavaScript to collect data and determine results</li>
+                  <li>Implemented successful tests as permanent features on the frontend.</li>
+                  <li>Utilized: HTML | CSS | JavaScript (vanilla) | Next.JS</li>
+                </ul>
+                <div className="other-icons">
                   <a
-                    href="https://github.com/Benaiah-Varner/Co-make-frontend"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <FontAwesomeIcon
-                      icon={faGithub}
-                      size="3x"
-                      className="github icon"
-                    />
-                    Front End
-                  </a>
-                  <a
-                    href="https://github.com/Benaiah-Varner/Co-Make-backend"
+                    href="https://www.magidglove.com/"
                     target="_blank"
                     rel="noreferrer"
                   >
                     <FontAwesomeIcon
                       className="icon"
-                      icon={faGithub}
+                      icon={faExternalLinkAlt}
                       size="3x"
                     />
-                    Back End
                   </a>
                 </div>
               </div>
@@ -278,57 +310,38 @@ function App() {
       </div>
       <AboutStyled id="about" ref={aboutRef}>
         <h2 style={{ transition: 'all 1s ease-in-out', opacity: aboutVisible ? 1 : 0, transform: aboutVisible ? 'translateY(0)' : 'translateY(5rem)' }}>About Me</h2>
-        <div className="row">
-          <div className="about-text">
-            <div className={`background ${otherProjVisible ? 'is-visible' : ''}`}>
-              <span>Background</span>
-              <p>
-                Hello, my name is Benaiah Varner, I am a full stack web
-                developer from Connecticut. Though constantly changing, my
-                primary focuses are Next.js, React Native, GraphQl, and Python.
-                I am enthuastic about applications in FinTech, algorithmic
-                trading and cryptocurrency. I am now seeking full-time and
-                freelance opportunities!
-              </p>
-            </div>
-            <div className={`technical-skills ${otherProjVisible ? 'is-visible' : ''}`}>
-              <span>Technical Skills</span>
-              <ul>
-                <div>
-                  <li>React.js</li>
-                  <li>Next.js</li>
-                  <li>Node.js</li>
-                  <li>Python</li>
-                  <li>HTML</li>
-                  <li>JavaScript</li>
-                </div>
-                <div>
-                  <li>CSS</li>
-                  <li>Sass</li>
-                  <li>Express</li>
-                  <li>GraphQl</li>
-                  <li>MongoDB</li>
-                  <li>React Native</li>
-                </div>
-              </ul>
-            </div>
+        <div className="about-text">
+          <div className={`background ${otherProjVisible ? 'is-visible' : ''}`}>
+            <span>Background</span>
+            <p>
+              Hello, my name is Benaiah Varner, I am a full stack web
+              developer from Tampa. Though constantly changing, my
+              primary focuses are Next.js, Node.js, TypeScript, and AI.
+              I am enthuastic about applications in FinTech, algorithmic
+              trading and AI. I am now seeking full-time and
+              freelance opportunities!
+            </p>
           </div>
-          <div className="about-images">
-            <img
-              src="/images/aboutmepic2.jpeg"
-              alt=""
-              className="about-images__img about-images__img--1"
-            />
-            <img
-              src="/images/aboutmepic1.jpeg"
-              alt=""
-              className="about-images__img about-images__img--2"
-            />
-            <img
-              src="/images/newProfile.png"
-              alt=""
-              className="about-images__img about-images__img--3"
-            />
+          <div className={`technical-skills ${otherProjVisible ? 'is-visible' : ''}`}>
+            <span>Technical Skills</span>
+            <ul>
+              <div>
+                <li>React.js</li>
+                <li>Next.js</li>
+                <li>Node.js</li>
+                <li>Open AI</li>
+                <li>HTML</li>
+                <li>JavaScript</li>
+              </div>
+              <div>
+                <li>CSS</li>
+                <li>Tailwind</li>
+                <li>Express</li>
+                <li>GraphQl</li>
+                <li>MongoDB</li>
+                <li>React Native</li>
+              </div>
+            </ul>
           </div>
         </div>
       </AboutStyled>

@@ -38,7 +38,7 @@ export const HeaderStyled = styled.div`
       text-align: left;
       position: absolute;
       top: 18%;
-      left: 13%;
+      left: 8%;
       h1,
       h2 {
         padding: 1.2rem 0;
@@ -56,7 +56,7 @@ export const HeaderStyled = styled.div`
       text-align: left;
       position: absolute;
       top: 18%;
-      left: 13%;
+      left: 8%;
       h1,
       h2 {
         padding: 1.2rem 0;

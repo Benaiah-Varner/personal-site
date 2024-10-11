@@ -102,7 +102,6 @@ export const ContactStyled = styled.section`
     }
   }
   @media (max-width: 910px) {
-    margin-top: 25vh;
     .form-container {
       .get-in-touch {
         font-size: 1.8rem;
@@ -115,7 +114,7 @@ export const ContactStyled = styled.section`
       margin-top: 25rem;
     }
     .form-container {
-      width: 90%;
+      width: 100%;
       .get-in-touch {
         padding: 1rem 4rem;
         width: 50%;
