@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import emailjs from 'emailjs-com';
+import React, { useState, useMemo } from 'react';
+import emailjs from '@emailjs/browser';
 
 const ContactForm = () => {
   const [formValues, setFormValues] = useState({
@@ -18,14 +18,29 @@ const ContactForm = () => {
     });
   };
 
+  useMemo(() => {
+    emailjs.init({
+      publicKey: 'v-B9lu5prNFOWe-MB',
+      // Do not allow headless browsers
+      blockHeadless: true,
+      limitRate: {
+        // Set the limit rate for the application
+        id: 'app',
+        // Allow 1 request per 10s
+        throttle: 10000,
+      },
+    });
+  }, []);
+
   const sendEmail = (e) => {
     e.preventDefault();
+    console.log(formValues);
     emailjs
       .send(
-        'service_uvu3b4x',
-        'template_od8oxm4',
+        'service_5n8vckj',
+        'template_j5l5kx8',
         formValues,
-        'user_kWpQYToyVENJPq0EnF6az'
+        'v-B9lu5prNFOWe-MB'
       )
       .then((res) => {
         console.log(res);

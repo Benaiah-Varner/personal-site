@@ -23,6 +23,7 @@ function App() {
   const aboutRef = useRef()
   const projectsRef = useRef();
   const otherProjectsRef = useRef();
+  const isMobile = window.innerWidth < 768;
 
   useEffect(() => {
     const observer = new IntersectionObserver(entries => {
@@ -83,7 +84,7 @@ function App() {
         <div className="featured-projects">
           <div className="featured-projects__card">
             <div className="thumbnail">
-              <img src="/images/corsair.png" alt="" style={{ borderRadius: '5px' }} />
+              <img src={isMobile ? "/images/corsair mobile.png" : '/images/corsair.png'} alt="" style={{ borderRadius: '5px' }} />
             </div>
             <div className="description">
               <h3>Featured Project</h3>
@@ -121,7 +122,7 @@ function App() {
           </div>
           <div className="featured-projects__card featured-projects__card--2">
             <div className="thumbnail">
-              <img src="/images/whoop-thumbnail.png" alt="" style={{ borderRadius: '5px' }} />
+              <img src={isMobile ? '/images/whoop-mobile.png' : "/images/whoop-thumbnail.png"} alt="" style={{ borderRadius: '5px' }} />
             </div>
             <div className="description">
               <h3>Featured Project</h3>
@@ -157,7 +158,7 @@ function App() {
           </div>
           <div className="featured-projects__card">
             <div className="thumbnail">
-              <img src="/images/triprecs.png" alt="" style={{ borderRadius: '5px' }} />
+              <img src={isMobile ? '/images/triprecs-mobile.png' : "/images/triprecs.png"} alt="" style={{ borderRadius: '5px' }} />
             </div>
             <div className="description">
               <h3>Featured Project</h3>

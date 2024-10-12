@@ -68,8 +68,8 @@ export const ProjectsStyled = styled.section`
           border-radius: 3px;
           background-color: #c9f7b0;
           height: 18rem;
-          display: flex;
-          align-items: center;
+          /* display: flex;
+          align-items: center; */
         }
         p {
           font-size: 1.6rem;
