@@ -284,16 +284,17 @@ function App() {
                 </div>
               </div>
               <div className={`other-project__card ${otherProjVisible ? 'is-visible-3' : ''}`}>
-                <h3 className="other-project__card__header">Magid Glove</h3>
+                <h3 className="other-project__card__header">EdgeFinder</h3>
                 <ul>
-                  <li>Helped create CRO test ideas and set up a/b tests in VWO</li>
-                  <li>Built tests using HTML, CSS, and JavaScript to collect data and determine results</li>
-                  <li>Implemented successful tests as permanent features on the frontend.</li>
-                  <li>Utilized: HTML | CSS | JavaScript (vanilla) | Next.JS</li>
+                  <li>Quantitative trading toolkit</li>
+                  <li>Built frontend with trade journaling features using Next.js and Typescript</li>
+                  <li>Implemented backtesting and stock screening scripts using python</li>
+                  <li>Building a custom LLM built on GPT-4 to offer trade insights, analysis, and trade recomendations</li>
+                  <li>Utilized: Numpy | Pandas | Next.JS | OpenAI API | Fast API</li>
                 </ul>
                 <div className="other-icons">
                   <a
-                    href="https://www.magidglove.com/"
+                    href="https://github.com/Benaiah-Varner/EdgeFinder"
                     target="_blank"
                     rel="noreferrer"
                   >
